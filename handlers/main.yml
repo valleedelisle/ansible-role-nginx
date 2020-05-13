@@ -12,6 +12,7 @@
     - name: "(Handler: All OSs) Reload NGINX"
       command: "nginx -s reload"
       changed_when: false
+      ignore_errors: true
 
   when:
     - nginx_start | bool
